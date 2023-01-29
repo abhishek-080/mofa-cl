@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import './navbar.css'
+import Top from './components/Top';
+import TopMinistry from './components/TopMinistry';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Herobelow from './Herobelow';
+import Herobelowri from './Herobelowri';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Top />
+      <TopMinistry />
+      <div>
+
+        <Navbar />
+      </div>
+
+      <Hero />
+
+
+      <div className='flex flex-row gap-'>
+
+        <div className='lg:w-[50%]'>
+          <Herobelow />
+        </div>
+
+        <div className='pr-5 lg:w-[50%]'>
+          <Herobelowri />
+        </div>
+      </div>
     </div>
   );
 }
